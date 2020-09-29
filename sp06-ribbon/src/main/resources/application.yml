@@ -12,5 +12,7 @@ eureka:
       defaultZone: http://eureka1:2001/eureka,http://eureka2:2002/eureka
 
 riboon:
-  MaxAutoRetries:1
-  MaxAutoRetriesNextServer:2
+  MaxAutoRetries: 1
+  MaxAutoRetriesNextServer: 2
+  OkToRetryOnAllOperations: true
+
