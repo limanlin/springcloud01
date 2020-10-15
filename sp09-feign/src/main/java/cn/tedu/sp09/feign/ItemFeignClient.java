@@ -6,7 +6,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-@FeignClient(name = "item-service")
+@FeignClient(name = "item-service",fallback = ItemFeignClientFB.class)
 public interface ItemFeignClient {
 
     @GetMapping("/{orderId}")
