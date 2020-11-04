@@ -16,3 +16,16 @@ riboon:
   MaxAutoRetriesNextServer: 2
   OkToRetryOnAllOperations: true
 
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
